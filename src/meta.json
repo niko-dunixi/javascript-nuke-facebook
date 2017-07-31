@@ -5,5 +5,7 @@
   "namespace": "paulbaker.io",
   "description": "Take a leaf out of Liz Lemon&#39;s book. Shut it down!",
   "version": "1.0.0",
+  "author": "github.com/paul-nelson-baker",
+  "match": "https://www.facebook.com/**",
   "include": [ "*" ]
 }
