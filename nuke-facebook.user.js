@@ -1,13 +1,14 @@
 // ==UserScript==
-// @name         Shut it down!
+// @name         nuke-facebook
 // @namespace    paulbaker.io
-// @version      0.1
-// @description  Take a leaf out of Liz Lemon's book. Shut it down.
+// @version      0.80
+// @description  Take a leaf out of Liz Lemon's book. Shut it down!
 // @author       github.com/paul-nelson-baker
 // @match        https://www.facebook.com/**
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.2.1.min.js
 // @require      https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js
+// @downloadURL  https://github.com/paul-nelson-baker/javascript-nuke-facebook/raw/master/shut-it-down.user.js
 // ==/UserScript==
 
 (function() {
