@@ -48,7 +48,7 @@
     shutItText.css('font-family', 'Oxygen Mono');
     shutItText.css('font-size', '2em');
     shutItText.append('<div class="setup" />');
-    $('.setup').text('Not worth it. Facebook\'s just a sinkhole of human potential.');
+    $('.setup').text('Not worth it. Facebook\'s just a sinkhole for human potential.');
     shutItText.append('<div class="punchline" />');
     let punchline = $('.punchline');
     punchline.css('font-size', '2.3em').html('<a href="https://reddit.com/r/programming">TO REDDIT!</a>');
