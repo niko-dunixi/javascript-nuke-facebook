@@ -1,6 +1,6 @@
 // Include custom styles into the script to be injected into web pages.
 // Remove this line to reduce script output size if you do not need styles.
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 import './index.css';
 
 $(document).ready(function() {
