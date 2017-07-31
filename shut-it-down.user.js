@@ -27,9 +27,11 @@
     shutItDown.append(embeddedGif);
     // Make the div vertically and horizontally centered.
     // https://stackoverflow.com/a/5703632/1478636
+    //body.css('.shut-it-down::pre', 'Bookface');
     shutItDown.css('padding', '2em');
-    shutItDown.css('border-color', '#BBB');
+    shutItDown.css('border-color', '#3b5998'); // Facebook Blue
     shutItDown.css('border-width', '2px');
+    shutItDown.css('border-top-width', '45px');
     shutItDown.css('border-style', 'solid');
     shutItDown.css('background-color', '#FFF');
     shutItDown.css('position', 'relative');
