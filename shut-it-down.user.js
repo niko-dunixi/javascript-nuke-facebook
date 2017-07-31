@@ -50,6 +50,7 @@
     shutItText.append('<div class="punchline" />');
     let punchline = $('.punchline');
     punchline.css('font-size', '2.3em').html('<a href="https://reddit.com/r/programming">TO REDDIT!</a>');
+    punchline.css('text-decoration', 'underline');
 
     function loop() {
       let speed = 200;
