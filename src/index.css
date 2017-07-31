@@ -1,1 +1,28 @@
 /* Add custom CSS rules to be injected into pages here. */
+
+.shut-it-down {
+  padding: 2em;
+  border-color: #3b5998;
+  border-width: 2px;
+  border-top-width: 45px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  float: left;
+  transform: translate(50%, 50%);
+  text-align: center;
+  width: 50%;
+  height: 100%;
+}
+
+.sid-text {
+  font-family: 'Oxygen Mono', 'Arial', 'Helvetica';
+  font-size: 2em;
+}
+
+.punchline {
+  font-size: 2.3em;
+  text-decoration: underline;
+}
