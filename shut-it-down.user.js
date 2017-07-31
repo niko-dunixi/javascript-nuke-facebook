@@ -25,9 +25,9 @@
     let embeddedGif = '<iframe src="https://giphy.com/embed/yyp58Yx3Qk0TK" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/yyp58Yx3Qk0TK"></a></p>';
     let shutItDown = $('.shut-it-down');
     shutItDown.append(embeddedGif);
-    // Make the div vertically and horizontally centered.
-    // https://stackoverflow.com/a/5703632/1478636
-    //body.css('.shut-it-down::pre', 'Bookface');
+    // This is the only way I can get this to work for ::before content
+    // https://stackoverflow.com/a/21709814/1478636
+    //document.styleSheets[0].addRule('.shut-it-down::before', 'content: "ASDF"; position: "relative";');
     shutItDown.css('padding', '2em');
     shutItDown.css('border-color', '#3b5998'); // Facebook Blue
     shutItDown.css('border-width', '2px');
