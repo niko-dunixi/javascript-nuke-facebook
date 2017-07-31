@@ -23,5 +23,9 @@
     "ts-node": "^3.0.6",
     "typescript": "^2.3.4",
     "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.2.10",
+    "jquery": "^3.2.1"
   }
 }

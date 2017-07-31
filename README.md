@@ -12,4 +12,8 @@ You can go to either:
  - [OpenUserJS](https://openuserjs.org/scripts/paulbaker/Shut_it_down!)
  - [GreasyFork](https://greasyfork.org/en/scripts/31907-shut-it-down)
 
+## Building
+`npm run build`
+`npm run build:prod`
+
 ![screenshot](screenshot.png)
