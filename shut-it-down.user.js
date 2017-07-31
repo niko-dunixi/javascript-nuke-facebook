@@ -7,6 +7,7 @@
 // @match        https://www.facebook.com/**
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.2.1.min.js
+// @require      https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js
 // ==/UserScript==
 
 (function() {
@@ -26,6 +27,11 @@
     shutItDown.append(embeddedGif);
     // Make the div vertically and horizontally centered.
     // https://stackoverflow.com/a/5703632/1478636
+    shutItDown.css('padding', '2em');
+    shutItDown.css('border-color', '#BBB');
+    shutItDown.css('border-width', '2px');
+    shutItDown.css('border-style', 'solid');
+    shutItDown.css('background-color', '#FFF');
     shutItDown.css('position', 'relative');
     shutItDown.css('top', '50%');
     shutItDown.css('float', 'left');
@@ -42,6 +48,23 @@
     shutItText.append('<div class="setup" />');
     $('.setup').text('Not worth it. Facebook\'s just a sinkhole of human potential.');
     shutItText.append('<div class="punchline" />');
-    $('.punchline').css('font-size', '2.3em').html('<a href="https://reddit.com/r/programming">TO REDDIT!</a>');
+    let punchline = $('.punchline');
+    punchline.css('font-size', '2.3em').html('<a href="https://reddit.com/r/programming">TO REDDIT!</a>');
+
+    function loop() {
+      let speed = 200;
+      $('.punchline a').animate({
+        color: '#C88'
+      }, speed);
+      $('.punchline a').animate({
+        color: '#8C8'
+      }, speed);
+      $('.punchline a').animate({
+        color: '#88C'
+      }, speed, loop());
+    }
+    // Reddit link loop
+    loop();
+
   });
 })();
