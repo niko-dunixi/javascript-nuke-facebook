@@ -7,5 +7,5 @@
   "version": "1.0.0",
   "author": "github.com/paul-nelson-baker",
   "match": "https://www.facebook.com/**",
-  "require": [ "https://code.jquery.com/jquery-3.2.1.min.js", "https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js" ]
+  "require": [ "https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js" ]
 }
