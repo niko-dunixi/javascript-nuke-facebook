@@ -33,6 +33,7 @@
     shutItDown.css('border-width', '2px');
     shutItDown.css('border-top-width', '45px');
     shutItDown.css('border-style', 'solid');
+    shutItDown.css('border-radius', '10px');
     shutItDown.css('background-color', '#FFF');
     shutItDown.css('position', 'relative');
     shutItDown.css('top', '50%');
