@@ -5,7 +5,6 @@
 // @version     1.0.0
 // @author      github.com/paul-nelson-baker
 // @match       https://www.facebook.com/**
-// @include     *
 // ==/UserScript==
 
 /******/ (function(modules) { // webpackBootstrap
