@@ -1,75 +1,12 @@
 // ==UserScript==
-// @name         nuke-facebook
-// @namespace    paulbaker.io
-// @version      0.80
-// @description  Take a leaf out of Liz Lemon's book. Shut it down!
-// @author       github.com/paul-nelson-baker
-// @match        https://www.facebook.com/**
-// @grant        none
-// @require      https://code.jquery.com/jquery-3.2.1.min.js
-// @require      https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js
-// @downloadURL  https://github.com/paul-nelson-baker/javascript-nuke-facebook/raw/master/shut-it-down.user.js
+// @name        nuke-facebook
+// @namespace   paulbaker.io
+// @description Take a leaf out of Liz Lemon&#39;s book. Shut it down!
+// @version     1.0.0
+// @author      github.com/paul-nelson-baker
+// @match       https://www.facebook.com/**
+// @require     https://code.jquery.com/jquery-3.2.1.min.js
+// @require     https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js
 // ==/UserScript==
 
-(function() {
-  'use strict';
-  $(document).ready(function() {
-    // Nuke the document. This is apparently the slowest way, but it's the only way I've seen work.
-    //   https://stackoverflow.com/a/22966637/1478636
-    let body = $('body');
-    body.empty();
-    let font = '<link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">';
-    body.append(font);
-    body.append('<div class=\'shut-it-down\'></div>');
-    // Embed the gif
-    // https://giphy.com/gifs/yyp58Yx3Qk0TK
-    let embeddedGif = '<iframe src="https://giphy.com/embed/yyp58Yx3Qk0TK" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/yyp58Yx3Qk0TK"></a></p>';
-    let shutItDown = $('.shut-it-down');
-    shutItDown.append(embeddedGif);
-    // This is the only way I can get this to work for ::before content
-    // https://stackoverflow.com/a/21709814/1478636
-    //document.styleSheets[0].addRule('.shut-it-down::before', 'content: "ASDF"; position: "relative";');
-    shutItDown.css('padding', '2em');
-    shutItDown.css('border-color', '#3b5998'); // Facebook Blue
-    shutItDown.css('border-width', '2px');
-    shutItDown.css('border-top-width', '45px');
-    shutItDown.css('border-style', 'solid');
-    shutItDown.css('border-radius', '10px');
-    shutItDown.css('background-color', '#FFF');
-    shutItDown.css('position', 'relative');
-    shutItDown.css('top', '50%');
-    shutItDown.css('float', 'left');
-    shutItDown.css('top', '50%');
-    shutItDown.css('transform', 'translate(50%, 50%)');
-    shutItDown.css('text-align', 'center');
-    shutItDown.css('width', '50%');
-    shutItDown.css('height', '100%');
-    // The below image text
-    shutItDown.append('<span class="sid-text"></span>');
-    let shutItText = $('.sid-text');
-    shutItText.css('font-family', 'Oxygen Mono');
-    shutItText.css('font-size', '2em');
-    shutItText.append('<div class="setup" />');
-    $('.setup').text('Not worth it. Facebook\'s just a sinkhole for human potential.');
-    shutItText.append('<div class="punchline" />');
-    let punchline = $('.punchline');
-    punchline.css('font-size', '2.3em').html('<a href="https://reddit.com/r/programming">TO REDDIT!</a>');
-    punchline.css('text-decoration', 'underline');
-
-    function loop() {
-      let speed = 200;
-      $('.punchline a').animate({
-        color: '#C88'
-      }, speed);
-      $('.punchline a').animate({
-        color: '#8C8'
-      }, speed);
-      $('.punchline a').animate({
-        color: '#88C'
-      }, speed, loop());
-    }
-    // Reddit link loop
-    loop();
-
-  });
-})();
+!function(t){function e(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,e),o.l=!0,o.exports}var n={};e.m=t,e.c=n,e.i=function(t){return t},e.d=function(t,n,r){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:r})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=5)}([function(t,e,n){var r=n(1);"string"==typeof r&&(r=[[t.i,r,""]]);var o={};o.transform=void 0;n(3)(r,o);r.locals&&(t.exports=r.locals)},function(t,e,n){e=t.exports=n(2)(void 0),e.push([t.i,"/* Add custom CSS rules to be injected into pages here. */",""])},function(t,e){function n(t,e){var n=t[1]||"",o=t[3];if(!o)return n;if(e&&"function"==typeof btoa){var i=r(o);return[n].concat(o.sources.map(function(t){return"/*# sourceURL="+o.sourceRoot+t+" */"})).concat([i]).join("\n")}return[n].join("\n")}function r(t){return"/*# sourceMappingURL=data:application/json;charset=utf-8;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(t))))+" */"}t.exports=function(t){var e=[];return e.toString=function(){return this.map(function(e){var r=n(e,t);return e[2]?"@media "+e[2]+"{"+r+"}":r}).join("")},e.i=function(t,n){"string"==typeof t&&(t=[[null,t,""]]);for(var r={},o=0;o<this.length;o++){var i=this[o][0];"number"==typeof i&&(r[i]=!0)}for(o=0;o<t.length;o++){var s=t[o];"number"==typeof s[0]&&r[s[0]]||(n&&!s[2]?s[2]=n:n&&(s[2]="("+s[2]+") and ("+n+")"),e.push(s))}},e}},function(t,e,n){function r(t,e){for(var n=0;n<t.length;n++){var r=t[n],o=v[r.id];if(o){o.refs++;for(var i=0;i<o.parts.length;i++)o.parts[i](r.parts[i]);for(;i<r.parts.length;i++)o.parts.push(f(r.parts[i],e))}else{for(var s=[],i=0;i<r.parts.length;i++)s.push(f(r.parts[i],e));v[r.id]={id:r.id,refs:1,parts:s}}}}function o(t,e){for(var n=[],r={},o=0;o<t.length;o++){var i=t[o],s=e.base?i[0]+e.base:i[0],a=i[1],u=i[2],c=i[3],f={css:a,media:u,sourceMap:c};r[s]?r[s].parts.push(f):n.push(r[s]={id:s,parts:[f]})}return n}function i(t,e){var n=b(t.insertInto);if(!n)throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");var r=g[g.length-1];if("top"===t.insertAt)r?r.nextSibling?n.insertBefore(e,r.nextSibling):n.appendChild(e):n.insertBefore(e,n.firstChild),g.push(e);else{if("bottom"!==t.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");n.appendChild(e)}}function s(t){if(null===t.parentNode)return!1;t.parentNode.removeChild(t);var e=g.indexOf(t);e>=0&&g.splice(e,1)}function a(t){var e=document.createElement("style");return t.attrs.type="text/css",c(e,t.attrs),i(t,e),e}function u(t){var e=document.createElement("link");return t.attrs.type="text/css",t.attrs.rel="stylesheet",c(e,t.attrs),i(t,e),e}function c(t,e){Object.keys(e).forEach(function(n){t.setAttribute(n,e[n])})}function f(t,e){var n,r,o,i;if(e.transform&&t.css){if(!(i=e.transform(t.css)))return function(){};t.css=i}if(e.singleton){var c=y++;n=m||(m=a(e)),r=l.bind(null,n,c,!1),o=l.bind(null,n,c,!0)}else t.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(n=u(e),r=d.bind(null,n,e),o=function(){s(n),n.href&&URL.revokeObjectURL(n.href)}):(n=a(e),r=p.bind(null,n),o=function(){s(n)});return r(t),function(e){if(e){if(e.css===t.css&&e.media===t.media&&e.sourceMap===t.sourceMap)return;r(t=e)}else o()}}function l(t,e,n,r){var o=n?"":r.css;if(t.styleSheet)t.styleSheet.cssText=w(e,o);else{var i=document.createTextNode(o),s=t.childNodes;s[e]&&t.removeChild(s[e]),s.length?t.insertBefore(i,s[e]):t.appendChild(i)}}function p(t,e){var n=e.css,r=e.media;if(r&&t.setAttribute("media",r),t.styleSheet)t.styleSheet.cssText=n;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(n))}}function d(t,e,n){var r=n.css,o=n.sourceMap,i=void 0===e.convertToAbsoluteUrls&&o;(e.convertToAbsoluteUrls||i)&&(r=x(r)),o&&(r+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(o))))+" */");var s=new Blob([r],{type:"text/css"}),a=t.href;t.href=URL.createObjectURL(s),a&&URL.revokeObjectURL(a)}var v={},h=function(t){var e;return function(){return void 0===e&&(e=t.apply(this,arguments)),e}}(function(){return window&&document&&document.all&&!window.atob}),b=function(t){var e={};return function(n){return void 0===e[n]&&(e[n]=t.call(this,n)),e[n]}}(function(t){return document.querySelector(t)}),m=null,y=0,g=[],x=n(4);t.exports=function(t,e){if("undefined"!=typeof DEBUG&&DEBUG&&"object"!=typeof document)throw new Error("The style-loader cannot be used in a non-browser environment");e=e||{},e.attrs="object"==typeof e.attrs?e.attrs:{},e.singleton||(e.singleton=h()),e.insertInto||(e.insertInto="head"),e.insertAt||(e.insertAt="bottom");var n=o(t,e);return r(n,e),function(t){for(var i=[],s=0;s<n.length;s++){var a=n[s],u=v[a.id];u.refs--,i.push(u)}if(t){r(o(t,e),e)}for(var s=0;s<i.length;s++){var u=i[s];if(0===u.refs){for(var c=0;c<u.parts.length;c++)u.parts[c]();delete v[u.id]}}}};var w=function(){var t=[];return function(e,n){return t[e]=n,t.filter(Boolean).join("\n")}}()},function(t,e){t.exports=function(t){var e="undefined"!=typeof window&&window.location;if(!e)throw new Error("fixUrls requires window.location");if(!t||"string"!=typeof t)return t;var n=e.protocol+"//"+e.host,r=n+e.pathname.replace(/\/[^\/]*$/,"/");return t.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi,function(t,e){var o=e.trim().replace(/^"(.*)"$/,function(t,e){return e}).replace(/^'(.*)'$/,function(t,e){return e});if(/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(o))return t;var i;return i=0===o.indexOf("//")?o:0===o.indexOf("/")?n+o:r+o.replace(/^\.\//,""),"url("+JSON.stringify(i)+")"})}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),n(0);console.log("Hello world!")}]);
