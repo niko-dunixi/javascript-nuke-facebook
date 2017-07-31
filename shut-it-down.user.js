@@ -16,23 +16,32 @@
     //   https://stackoverflow.com/a/22966637/1478636
     let body = $('body');
     body.empty();
+    let font = '<link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">';
+    body.append(font);
     body.append('<div class=\'shut-it-down\'></div>');
     // Embed the gif
     // https://giphy.com/gifs/yyp58Yx3Qk0TK
     let embeddedGif = '<iframe src="https://giphy.com/embed/yyp58Yx3Qk0TK" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/yyp58Yx3Qk0TK"></a></p>';
-    let myDiv = $('.shut-it-down');
-    myDiv.append(embeddedGif);
+    let shutItDown = $('.shut-it-down');
+    shutItDown.append(embeddedGif);
     // Make the div vertically and horizontally centered.
     // https://stackoverflow.com/a/5703632/1478636
-    myDiv.css('position', 'relative');
-    myDiv.css('top', '50%');
-    myDiv.css('float', 'left');
-    myDiv.css('top', '50%');
-    myDiv.css('transform', 'translate(50%, 50%)');
-    myDiv.css('text-align', 'center');
+    shutItDown.css('position', 'relative');
+    shutItDown.css('top', '50%');
+    shutItDown.css('float', 'left');
+    shutItDown.css('top', '50%');
+    shutItDown.css('transform', 'translate(50%, 50%)');
+    shutItDown.css('text-align', 'center');
+    shutItDown.css('width', '50%');
+    shutItDown.css('height', '100%');
     // The below image text
-    myDiv.append('<span class="sid-text"></span>');
-    let myText = $('.sid-text');
-    myText.text('Not worth it. Facebook\'s just a sinkhole of human potential.');
+    shutItDown.append('<span class="sid-text"></span>');
+    let shutItText = $('.sid-text');
+    shutItText.css('font-family', 'Oxygen Mono');
+    shutItText.css('font-size', '2em');
+    shutItText.append('<div class="setup" />');
+    $('.setup').text('Not worth it. Facebook\'s just a sinkhole of human potential.');
+    shutItText.append('<div class="punchline" />');
+    $('.punchline').css('font-size', '2.3em').html('<a href="https://reddit.com/r/programming">TO REDDIT!</a>');
   });
 })();
