@@ -8,7 +8,7 @@
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.2.1.min.js
 // @require      https://code.jquery.com/color/jquery.color.plus-names-2.1.2.min.js
-// @downloadURL  https://github.com/paul-nelson-baker/javascript-nuke-facebook/raw/master/shut-it-down.user.js
+// @downloadURL  https://github.com/paul-nelson-baker/javascript-nuke-facebook/raw/master/nuke-facebook.user.js
 // ==/UserScript==
 
 (function() {
